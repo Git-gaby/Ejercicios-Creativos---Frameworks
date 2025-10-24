@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Sitio con Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .card:hover { transform: translateY(-5px); transition: 0.3s; }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero is-medium">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 has-text-white">¡Hola, Mundo!</h1>
+        <h2 class="subtitle is-3 has-text-white">Mi sitio web con <strong>Bulma</strong></h2>
+        <button class="button is-white is-large">
+          <span class="icon"><i class="fas fa-rocket"></i></span>
+          <span>Comenzar</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Cards -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered mb-5">Mis Proyectos</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">
+                <span class="icon has-text-info"><i class="fas fa-code"></i></span>
+                Proyecto 1
+              </p>
+              <p class="subtitle">Aplicación web moderna</p>
+              <button class="button is-link">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">
+                <span class="icon has-text-success"><i class="fas fa-laptop"></i></span>
+                Proyecto 2
+              </p>
+              <p class="subtitle">Dashboard interactivo</p>
+              <button class="button is-success">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">
+                <span class="icon has-text-danger"><i class="fas fa-heart"></i></span>
+                Proyecto 3
+              </p>
+              <p class="subtitle">Portfolio creativo</p>
+              <button class="button is-danger">Ver más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="section has-background-light">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box">
+            <h3 class="title is-3 has-text-centered">Contáctame</h3>
+            <div class="field">
+              <label class="label">Nombre</label>
+              <input class="input" type="text" placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <input class="input" type="email" placeholder="tu@email.com">
+            </div>
+            <div class="field">
+              <label class="label">Mensaje</label>
+              <textarea class="textarea" placeholder="Tu mensaje..."></textarea>
+            </div>
+            <button class="button is-link is-fullwidth is-medium">
+              Enviar Mensaje
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>Mi Sitio</strong> con Bulma CSS 💜</p>
+      <p>Botón para que Berthel me ponga <strong>5.0</strong> ⭐</p>
+    </div>
+  </footer>
+</body>
+</html>

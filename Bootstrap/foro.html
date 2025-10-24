@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETS INFOPLUS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .header-blanco {
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .texto-principal {
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+            color: #ffd700 !important;
+        }
+        
+        .caja-blanca {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .caja-blanca:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+        }
+        
+        .texto-num1 {
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .texto-num2 {
+            color: #4facfe;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .texto-num3 {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .img-post {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+        
+        .img-post:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-enviar {
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+        
+        .btn-enviar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+        
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 0 0.2rem rgba(79, 172, 254, 0.25);
+        }
+        
+        .lista-recursos {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .lista-recursos li {
+            margin: 10px 0;
+        }
+        
+        .lista-recursos a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 15px;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s;
+            background: linear-gradient(to right, transparent 0%, #f0f0f0 100%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+        }
+        
+        .lista-recursos a:hover {
+            background-position: 0 0;
+            color: #4facfe;
+            padding-left: 25px;
+        }
+        
+        .texto-fuente {
+            color: #888;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        
+        .comentarios-lista {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .comentarios-lista > div {
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4facfe;
+        }
+        
+        .pie-pagina {
+            background: linear-gradient(to right, #2c3e50 0%, #34495e 100%) !important;
+            border-radius: 15px !important;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .text-info {
+            color: #4facfe !important;
+        }
+        
+        .badge-new {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-blanco">
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="col-md-6">
+                    <h1 class="texto-principal mb-0">🏥 ETS INFOPLUS</h1>
+                </div>
+                <div class="col-md-6">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse justify-content-end">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Introducción</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Información General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mitos y Realidades</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="texto-num1 mb-4">📰 Últimas Publicaciones</h2>
+                
+                <article class="caja-blanca mb-4">
+                    <h3 class="texto-num2">💊 Tratamientos Modernos para VIH <span class="badge-new">NUEVO</span></h3>
+                    <img src="https://images.pexels.com/photos/5386754/pexels-photo-5386754.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tratamiento VIH" class="img-post">
+                    <p class="texto-parrafo">Los avances en terapia antirretroviral han transformado el VIH en una condición manejable. Los tratamientos actuales suprimen la replicación viral permitiendo vidas saludables. Medicamentos recientes tienen menos efectos secundarios y regímenes más simples.</p>
+                    <p class="texto-parrafo">El tratamiento temprano es crucial. Personas con carga viral indetectable no transmiten el virus (I=I). La investigación avanza con anticuerpos monoclonales y terapias génicas.</p>
+                    <p class="texto-fuente">📚 Fuente: OMS, 2024</p>
+                </article>
+
+                <article class="caja-blanca mb-4">
+                    <h3 class="texto-num2">💙 Viviendo con Herpes Genital</h3>
+                    <img src="https://www.shutterstock.com/image-photo/smiling-doctor-stethoscope-clipboard-on-600nw-2536277671.jpg" alt="Herpes genital" class="img-post">
+                    <p class="texto-parrafo">Recibir un diagnóstico de herpes genital puede ser devastador. Es una condición común y manejable. Aproximadamente 1 de cada 6 personas entre 14-49 años tiene herpes genital.</p>
+                    <p class="texto-parrafo">Mi primer brote fue terrible, pero con tratamiento antiviral los brotes son menos frecuentes. Aprendí a reconocer síntomas prodrómicos y comenzar medicación de inmediato.</p>
+                    <p class="texto-fuente">📚 Fuente: AEPCC, 2024</p>
+                </article>
+
+                <section class="caja-blanca">
+                    <h3 class="texto-num2 mb-4">💬 Comentarios</h3>
+                    
+                    <form class="mb-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="✍️ Tu nombre">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="💭 Comparte tu experiencia..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">Enviar ✉️</button>
+                    </form>
+
+                    <div class="comentarios-lista">
+                        <div>
+                            <h5 class="texto-num3">👤 Ejemplo Usuario 1</h5>
+                            <p class="texto-parrafo">Gracias por la información sobre VIH. Me diagnosticaron el año pasado y estaba muy asustado.</p>
+                        </div>
+
+                        <div>
+                            <h5 class="texto-num3">👤 Ejemplo Usuario 2</h5>
+                            <p class="texto-parrafo">El artículo sobre herpes me ha ayudado mucho. Llevo 3 años con el diagnóstico.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="caja-blanca mb-4">
+                    <h3 class="texto-num2">ℹ️ Acerca de Nosotros</h3>
+                    <p class="texto-parrafo">ETS INFOPLUS es una comunidad de apoyo e información sobre enfermedades de transmisión sexual. Proporcionamos información precisa y reducimos el estigma.</p>
+                </div>
+
+                <div class="caja-blanca">
+                    <h3 class="texto-num2">📌 Recursos</h3>
+                    <ul class="lista-recursos">
+                        <li><a href="#">🆘 Centro de Ayuda</a></li>
+                        <li><a href="#">🔬 Pruebas ETS</a></li>
+                        <li><a href="#">🎥 Videos e Infografías</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina mt-5 bg-dark text-white text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-info">🏥 ETS INFOPLUS</h3>
+                    <p>Información confiable y actualizada sobre Enfermedades de Transmisión Sexual.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-info">📞 Contacto</h3>
+                    <p>📧 Email: info@etsinfoplus.com</p>
+                    <p>☎️ Teléfono: 300-693-3211</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="text-info">🔗 Enlaces Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Información General</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Mitos y Realidades</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="border-top pt-3 mt-3 mb-0">&copy; 2025 ETS INFOPLUS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

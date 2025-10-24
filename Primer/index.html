@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primer Estilo con Primer CSS</title>
+  
+  <!-- Primer CSS Framework -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/primer/21.0.7/primer.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .header-card h1 {
+      color: #0366d6;
+      margin-bottom: 15px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .header-card p {
+      color: #586069;
+      font-size: 1.2em;
+    }
+
+    .analysis-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .analysis-card h2 {
+      color: #24292e;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #0366d6;
+    }
+
+    /* Tabla colorida mejorada */
+    .custom-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .custom-table thead {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .custom-table th {
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .custom-table tbody tr {
+      transition: all 0.3s ease;
+    }
+
+    .custom-table tbody tr:nth-child(odd) {
+      background-color: #f6f8fa;
+    }
+
+    .custom-table tbody tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .custom-table tbody tr:hover {
+      background: linear-gradient(90deg, #fff5f5 0%, #ffe5e5 100%);
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e1e4e8;
+    }
+
+    /* Badges coloridos para tipos */
+    .badge-html {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .badge-css {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    /* Caja especial de Primer */
+    .primer-box {
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      border-radius: 12px;
+      padding: 30px;
+      margin: 30px 0;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    /* Código destacado */
+    code {
+      background: #f6f8fa;
+      padding: 3px 6px;
+      border-radius: 3px;
+      color: #e36209;
+      font-size: 0.9em;
+    }
+
+    /* Iconos decorativos con Primer */
+    .icon-decoration {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header con Primer CSS -->
+    <div class="header-card">
+      <h1>
+        <span class="icon-decoration">🎨</span>
+        Mi Primer Estilo CSS con Primer
+      </h1>
+      <p class="Lead">
+        Este es un diseño moderno y colorido utilizando el framework Primer CSS de GitHub
+      </p>
+      
+      <!-- Botones de Primer -->
+      <div class="mt-3">
+        <button class="btn btn-primary mr-2" type="button">Primario</button>
+        <button class="btn btn-success mr-2" type="button">Éxito</button>
+        <button class="btn btn-danger mr-2" type="button">Peligro</button>
+        <button class="btn btn-outline" type="button">Contorno</button>
+      </div>
+    </div>
+
+    <!-- Alerts de Primer -->
+    <div class="flash flash-success mb-3">
+      <svg class="octicon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM6.78 8.22a.75.75 0 0 0 0 1.06l2 2a.75.75 0 0 0 1.06 0l4-4a.75.75 0 0 0-1.06-1.06L9 9.94 7.78 8.72a.75.75 0 0 0-1.06 0Z"></path>
+      </svg>
+      ¡Bienvenido! Esta página utiliza componentes modernos de Primer CSS
+    </div>
+
+    <!-- Análisis en tabla -->
+    <div class="analysis-card">
+      <h2>
+        <span class="icon-decoration">📊</span>
+        Análisis Estructurado del Código
+      </h2>
+      
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Elemento</th>
+            <th>Propiedad CSS</th>
+            <th>Valor CSS</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="Label badge-html">HTML</span></td>
+            <td><code>&lt;html&gt;</code></td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Contenedor principal del documento</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-css">CSS</span></td>
+            <td><code>body</code></td>
+            <td><code>background-color</code></td>
+            <td><span class="Label Label--success">lightblue</span></td>
+            <td>Fondo de la página azul claro</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-html">HTML</span></td>
+            <td><code>&lt;h1&gt;</code></td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Título principal del documento</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-css">CSS</span></td>
+            <td><code>h1</code></td>
+            <td><code>color</code></td>
+            <td><span class="Label Label--primary">navy</span></td>
+            <td>Color de texto azul marino</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-css">CSS</span></td>
+            <td><code>h1</code></td>
+            <td><code>text-align</code></td>
+            <td><span class="Label">center</span></td>
+            <td>Alineación centrada del texto</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-html">HTML</span></td>
+            <td><code>&lt;p&gt;</code></td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>Párrafo de texto informativo</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-css">CSS</span></td>
+            <td><code>p</code></td>
+            <td><code>color</code></td>
+            <td><span class="Label Label--danger">darkred</span></td>
+            <td>Color de texto rojo oscuro</td>
+          </tr>
+          <tr>
+            <td><span class="Label badge-css">CSS</span></td>
+            <td><code>p</code></td>
+            <td><code>font-size</code></td>
+            <td><span class="Label Label--warning">18px</span></td>
+            <td>Tamaño de fuente de 18 píxeles</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Caja especial de Primer -->
+    <div class="primer-box">
+      <span class="icon-decoration">✨</span>
+      Diseñado con Primer CSS Framework
+      <span class="icon-decoration">✨</span>
+    </div>
+
+    <!-- Componentes adicionales de Primer -->
+    <div class="Box">
+      <div class="Box-header">
+        <h3 class="Box-title">Componentes de Primer CSS</h3>
+      </div>
+      <div class="Box-body">
+        <p>Primer CSS es el sistema de diseño de GitHub que incluye componentes reutilizables:</p>
+        <ul>
+          <li><span class="Label Label--primary">Botones</span> con múltiples variantes</li>
+          <li><span class="Label Label--success">Alertas</span> para notificaciones</li>
+          <li><span class="Label Label--warning">Labels</span> para categorización</li>
+          <li><span class="Label Label--danger">Boxes</span> para contenedores estructurados</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
